@@ -119,7 +119,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1% 98% 1%;
-  grid-template-rows: 20px auto 50px;
+  grid-template-rows: 32px auto 0;
   grid-template-areas:
     "header header header"
     "left content right"
@@ -140,7 +140,7 @@ header {
   align-items: left;
   position: fixed;
   padding: 0 0;
-  height: 2.5vw;
+  height: 32px;
   width: 100vw;
   background: var(--c-lpink);
   border-radius: var(--border-radius);
@@ -151,16 +151,27 @@ header {
 
 .left {
   grid-area: left;
-  height: 0px;
+  width: auto;
 }
 
 .right {
   grid-area: right;
+  width: auto;
 }
 
 main {
   grid-area: content;
   padding: 20px 10px;
+}
+
+.body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar {
@@ -174,7 +185,8 @@ footer {
   grid-template-columns: subgrid subgrid subgrid;
   grid-template-areas: "left copyright right";
   align-items: center;
-  padding: 0 1%;
+  padding: 0 0;
+  height: fit-content;
   z-index: 1;
   border-radius: 2px;
   bottom: 0;
@@ -183,19 +195,13 @@ footer {
     rgba(0, 0, 0, 0.15) 0 -2px 12px;
 }
 
-#logo {
-  height: 50px;
-  grid-area: logo;
-}
-#logo img {
-  object-fit: scale-down;
-  width: 100%;
-  height: 100%;
-}
-
-#spacer {
-  grid-area: spacer;
-  width: 600px;
+#copyright {
+  color: var(--c-black);
+  grid-area: copyright;
+  align-self: center;
+  text-align: center;
+  width: fit-content;
+  height: 20;
 }
 
 /* decoration Box */
@@ -274,21 +280,14 @@ footer {
 .small_body {
   color: #afbfd2;
   font-size: 1.125rem;
-  background: #fff;
+  background: var(--c-lpink);
+  color: var(--c-black);
   border-radius: var(--border-radius);
   padding: 0.5333333333rem 1.6rem;
   margin: 0rem 0.5333333333rem 1.2rem;
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px -2px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.15) 0px 8px 12px -6px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-/* Footer */
-
-#copyright {
-  color: var(--c-black);
-  grid-area: copyright;
-  align-self: end;
 }
 
 /* Navbar */
