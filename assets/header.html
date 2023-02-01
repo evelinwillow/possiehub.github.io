@@ -3,16 +3,17 @@
 </div>
 <div id="spacer"></div>-->
 <div class="navbar">
-  <a>[possie@site] $ ls</a>
-  <a href="/">~/</a>
-  <a href="/blog/">~/blog</a>
-  <a href="#" id="about-us">~/about</a>
-  <a href="https://github.com/possiehub">~/.git</a>
-  <div id="about-us-dropdown" style="display: none">
-    <div class="spacer"></div>
-    <a href="/privacy-policy/">~/about/privacy_policy</a>
-    <a href="/terms-of-service/">~/about/tos</a>
-    <a href="/contact-us/">~/about/contact</a>
+  <a href="#" id="nav">[evelin@pink] $ ls</a>
+  <div id="nav-links">
+    <a href="/">~/</a>
+    <a href="/blog/">~/blog</a>
+    <a href="#" id="about-us">~/about</a>
+    <a href="https://github.com/possiehub">~/.git</a>
+    <div id="about-us-dropdown" style="display: none">
+      <a href="/privacy-policy/">~/about/privacy_policy</a>
+      <a href="/terms-of-service/">~/about/tos</a>
+      <a href="/contact-us/">~/about/contact</a>
+    </div>
   </div>
 </div>
 <script>
@@ -22,6 +23,17 @@
   $(document).click(function (event) {
     if (!$(event.target).closest("#about-us-dropdown, #about-us").length) {
       $("#about-us-dropdown").hide();
+    }
+  });
+</script>
+
+<script>
+  $("#nav").click(function () {
+    $("#nav-links").toggle();
+  });
+  $(document).click(function (event) {
+    if (!$(event.target).closest("#nav-links, #nav").length) { 
+      $("nav-links").hide();
     }
   });
 </script>
