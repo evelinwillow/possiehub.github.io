@@ -32,12 +32,12 @@ function loadPost(postId) {
 async function loadPostList() {
   const postListHtml = [];
   const data = await $.ajax({
-    url: "/Website/blog/posts/posts.json",   /* <---- HIER DIE URL ANPASSEN */
+    url: "/blog/posts/posts.json",   /* <---- HIER DIE URL ANPASSEN */
   });
 
   for (let i = 0; i < data.posts.length; i++) {
     const postId = data.posts[i].id;
-    const postUrl = "/Website/blog/posts/" + postId + ".html";  /* <---- HIER DIE URL ANPASSEN */
+    const postUrl = "/blog/posts/" + postId + ".html";  /* <---- HIER DIE URL ANPASSEN */
     const postData = await $.get(postUrl);
 
     const postTitle = $(postData).find(".post_title").text();
