@@ -22,6 +22,7 @@
   --c-mpink: rgba(255, 220, 255);
   --c-dpink: rgba(255, 100, 255);
   --c-white: rgb(255, 255, 245);
+  --c-lavender: #E6E6FA;
 }
 
 /* font and links */
@@ -202,7 +203,7 @@ footer {
 .smallbox_light {
   padding: 1rem 2rem;
   color: var(--c-black);
-  background: var(--c-white);
+  background: var(--c-lavender);
   border: 0;
   border-radius: 5px;
   padding: 1% 2%;
@@ -215,7 +216,7 @@ footer {
 
 .box_light {
   color: var(--c-black);
-  background: var(--c-white);
+  background: var(--c-lavender);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: var(--border-radius);
   margin-top: 1.6rem;
@@ -227,7 +228,7 @@ footer {
 .smallbox {
   padding: 1rem 2rem;
   color: var(--c-black);
-  background: var(--c-white);
+  background: var(--c-lavender);
   border: 0;
   border-radius: 5px;
   padding: 2% 5%;
@@ -254,7 +255,7 @@ footer {
   display: flex;
   justify-content: left;
   align-items: left;
-  background: var(--c-white);
+  background: var(--c-lavender);
   border-radius: var(--border-radius);
   padding: 0.8333333333rem 1.6rem;
   margin: 0.8333333333rem 0.5333333333rem 1rem;
