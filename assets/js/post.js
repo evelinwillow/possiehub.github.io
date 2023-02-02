@@ -18,7 +18,7 @@ function loadPost(postId) {
         '<h1 class="box_light" >' +
           postTitle +
           "</h1>" +
-          '<p class="small_body post_date">' +
+          '<p class="small_body_date post_date">' +
           postDate +
           "</p>" +
           '<div class="box"><p>' +
