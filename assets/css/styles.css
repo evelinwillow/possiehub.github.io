@@ -378,13 +378,19 @@ footer {
 /* Contact Form */
 
 .form {
-  margin: 3rem auto;
-  max-width: 40rem;
+  margin: 1rem 20% 0 20%;
+  max-width: 60rem;
+  border: var(--c-lavender);
+  border-radius: 20px;
+  border-style: double;
+  border-width: 4px;
+  justify-content: space-between;
+  display: inline-flexbox;
 }
 
 .form .form-row {
-  margin-right: 1.6rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .form .form-row:last-child {
@@ -394,13 +400,17 @@ footer {
 .form input,
 .form textarea,
 .form select {
-  padding: 0.8rem;
-  border: 2px solid var(--border-gray);
+  border: 1px var(--c-mpink);
   border-radius: 0.25em;
-  display: block;
+  display: inline;
   width: 100%;
-  color: var(--text-color);
-  background-color: var(--bg-gray-3);
+  color: var(--c-black);
+  background-color: var(--c-lpink);
+}
+
+.form input {
+  display: inline-flex;
+  width: 48%;
 }
 
 textarea:required:invalid,
@@ -408,14 +418,14 @@ input:required:invalid,
 textarea:focus:invalid,
 input:focus:invalid {
   content: "*";
-  box-shadow: var(--bg-gray-3) 1rem 0 inset, var(--bg-gray-3) -1rem 0 inset,
-    var(--bg-gray-3) 0 -8px inset, var(--orange-1) 0 -10px inset,
-    white 0 -8px inset;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
+  rgb(255, 100, 255) -2px 7px 15px -3px inset,
+  rgba(255, 255, 255, 1) 0px 2px 12px inset;
 }
 
 .form textarea {
   resize: none;
-  margin-right: 1.6rem;
   height: 10rem;
 }
 
@@ -427,7 +437,7 @@ input:focus:invalid {
 .form .submit-btn {
   padding: 1rem 2rem;
   cursor: pointer;
-  background: var(--orange-2);
+  background: var(--c-dpink);
   border: 0;
   border-radius: 5px;
   padding: 2% 5%;
