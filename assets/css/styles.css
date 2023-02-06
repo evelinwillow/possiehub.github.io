@@ -13,6 +13,14 @@
   --c-lavender: #E6E6FA;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-lpink: black;
+    --c-white: black;
+    --c-black: white;
+  }
+}
+
 /* font and links */
 h1,
 h2,
