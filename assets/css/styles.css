@@ -4,23 +4,11 @@
   --font-weight-normal: 400;
   --font-weight-bold: 600;
   --line-height: 1.6;
-  --bg-gray-1: #343a49;
-  --bg_grey-2: #686868;
-  --bg-gray-3: #343a49;
-  --border-gray: #2f374c;
-  --content_bg: rgba(47, 55, 76, 1);
-  --content_bg_sub: #424a60;
-  --orange-1: #d45500;
-  --orange-2: #cd8252;
-  --text-color: #afbfd2;
-  --text-color-2: #16263a;
-  --headings-color: #111111;
-  --orange-rgb: 255, 128, 171;
   --c-black: #000;
   --c-blue: #0FF;
-  --c-lpink: rgba(255, 245, 255);
-  --c-mpink: rgba(255, 220, 255);
-  --c-dpink: rgba(255, 100, 255);
+  --c-lpink: rgb(255, 245, 255);
+  --c-mpink: rgb(255, 220, 255);
+  --c-dpink: rgb(255, 100, 255);
   --c-white: rgb(255, 255, 245);
   --c-lavender: #E6E6FA;
 }
