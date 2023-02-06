@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Satisfy&family=VT323&display=swap');
+
 /* colors */
 :root {
   --border-radius: 2px;
-  --font-weight-normal: 400;
-  --font-weight-bold: 600;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
   --line-height: 1.6;
   --c-black: #000;
   --c-blue: #0FF;
@@ -15,10 +17,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-mpink: rgb(255, 100, 255);
-    --c-dpink: rgb(255, 0, 255);
+    --c-mpink: rgb(255, 200, 255);
+    --c-dpink: rgb(255, 120, 255);
   }
 }
+
 
 /* font and links */
 h1,
@@ -28,12 +31,14 @@ h4,
 h5,
 h6 {
   color: var(--c-black);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: var(--font-weight-normal);
+  font-family: 'Satisfy', cursive;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.02rem;
   line-height: 1.2;
   margin-top: 0.9333333333rem;
+  text-shadow:  var(--c-mpink) 2px 4px 1px;
 }
+
 
 h1,
 .h1 {
@@ -106,7 +111,8 @@ a:active {
 /* Main elements */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
   color: var(--c-black);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height);
@@ -123,9 +129,10 @@ body {
 }
 
 header {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: var(--c-black);
+  font-family: 'VT323', monospace;
   font-weight: var(--font-weight-normal);
+  font-size: 1rem;
+  color: var(--c-black);
   grid-area: header;
   display: grid;
   grid-template-columns: subgrid subgrid subgrid;
@@ -210,21 +217,49 @@ footer {
   padding: 1% 2%;
   width: fit-content;
   display: inline-block;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
-    0 2px 12px rgba(0, 0, 0, 0.15);
+  color: var(--c-lpink);
+  
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink);
+
+  box-shadow: 
+  rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+  rgba(0, 0, 0, 0.15) 0 2px 12px;
+}
+
+.smallbox_light a {
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0px -1px black,
+  0px 2px white, 2px 0px white,
+  -2px 0px white, 0 -2px white,
+  0px 0px 0px black;
 }
 
 .box_light {
+  width: auto;
   color: var(--c-black);
   background: var(--c-lavender);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  margin-top: 1.6rem;
-  padding: 0.5333333333rem 1.6rem 1.6rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
-    0 2px 12px rgba(0, 0, 0, 0.15);
+  margin: 0rem 0 0rem 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  color: var(--c-lpink);
+  
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink);
+  
+  box-shadow: 
+  rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+  rgba(0, 0, 0, 0.15) 0 2px 12px ;
 }
 .smallbox {
   padding: 1rem 2rem;
@@ -242,9 +277,9 @@ footer {
 
 .box {
   color: var(--c-black);
-  background: var(--c-white);
+  background: var(--c-lavender);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+  border-radius: 1px;
   margin-top: 1.6rem;
   padding: 0.5333333333rem 1.6rem 1.6rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -252,17 +287,42 @@ footer {
     0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.small_header {
+.box p {
+  text-indent: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: var(--c-white);
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px,
+  rgba(0, 0, 0, 0) 0px 7px 13px -3px,
+  0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box h2, h3, h4, h5, h6 {
+  color: var(--c-lpink);
   display: flex;
+  text-indent: 1rem;
+  font-size: 2rem;
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink); 
+}
+
+.small_header {
+  font-family: 'Satisfy', cursive;
+  font-weight: var(--font-weight-normal);
+  display: flexbox;
+  width: fit-content;
+  height: fit-content;
   justify-content: left;
   align-items: left;
-  width: 50%;
   background: var(--c-lavender);
+  padding: 0.3rem 1rem 2.3rem 1rem;
+  margin: 0 0 0 2rem;
   border-radius: 8px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  padding: 0.8333333333rem 1.6rem;
-  margin: 0.8333333333rem 2.5333333333rem 0rem;
   box-shadow: rgba(0, 0, 0, 1) 0px -2px 4px -2px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;  height: 0px;
 }
@@ -277,7 +337,8 @@ footer {
 
 .small_body {
   color: #afbfd2;
-  font-size: 1.125rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
   background: var(--c-lpink);
   color: var(--c-black);
   border-radius: 20px;
@@ -289,7 +350,7 @@ footer {
 }
 .small_body_date {
   color: #afbfd2;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   background: var(--c-lpink);
   color: var(--c-black);
   border-radius: 20px;
@@ -314,7 +375,6 @@ footer {
 }
 
 .navbar a {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--c-black);
   font-weight: var(--font-weight-normal);
   text-decoration: none;
@@ -405,16 +465,30 @@ footer {
 }
 
 .form_small {
+  display: flex;
+  color: var(--c-black);
+  background: var(--c-lavender);
+  border: 0;
+  border-radius: 8px;
+  padding: 1% 2%;
   margin: 0 20% 0 20%;
-  width: fit-content;
-  border: var(--c-lavender);
-  border-radius: 40px;
-  border-style: double;
-  border-width: 8px;
-  justify-content: space-around;
-  align-content: space-around;
-  display: flexbox;
-  flex-direction: column;
+  width: max-content;
+  display: inline-block;
+  box-shadow: 
+  rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+  rgba(0, 0, 0, 0.15) 0 2px 12px;
+}
+
+.form_small h1 {
+  color: var(--c-lpink);
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink);
+  margin: 0 1rem 0 1rem;
+
 }
 
 .form .form-row {
@@ -443,7 +517,7 @@ footer {
 }
 
 .form input {
-  width: 47%;
+  width: 45%;
 }
 
 textarea:required:invalid,
@@ -470,20 +544,28 @@ input:focus:invalid {
   margin-bottom: 0.5rem;
 }
 .form .submit-btn {
-  padding: 1rem 2rem;
   cursor: pointer;
   background: var(--c-lpink);
   border: 0;
   border-radius: 10px;
-  padding: 2% 5%;
+  padding: 0.2rem 0%;
+  margin-bottom: 1rem;
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   transition: 0.3s background-color;
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
     0 2px 12px rgba(0, 0, 0, 0.15);
+
+  font-family: 'Satisfy', cursive;
+  font-size: 2rem;
+  color: var(--c-lpink);
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink);
 }
 
 .form .submit-btn:hover {
@@ -510,15 +592,24 @@ input:focus:invalid {
 /* Post */
 
 .prev_title {
-  font-size: 1.125rem;
-  text-align: left;
+  font-size: 1.6rem;
+  text-align: start;
+  padding-right: 1rem;
+  color: var(--c-lpink);
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink);
 }
 
 .prev_date {
-  text-align: right;
-  margin-left: auto;
+  font-size: 1.4rem;
+  text-align: end;
+  color: slategray;
 }
 
 .post_date {
+  font-size: 1.8rem;
   text-align: right;
+  padding: 0 2rem 0.33rem 2rem;
 }
