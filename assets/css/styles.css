@@ -15,10 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-lpink: black;
-    --c-white: black;
-    --c-black: white;
     --c-mpink: rgb(255, 100, 255);
+    --c-dpink: rgb(255, 0, 255);
   }
 }
 
