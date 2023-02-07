@@ -13,6 +13,7 @@
   --c-dpink: rgb(255, 100, 255);
   --c-white: rgb(255, 255, 245);
   --c-lavender: #E6E6FA;
+  --c-dlavender: #7171ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -215,6 +216,7 @@ footer {
 
 .content_header_container {
   display: flex;
+  width: 100%;
   align-content: center;
   justify-content: space-between;
 }
@@ -251,6 +253,38 @@ footer {
   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
   rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
   rgba(0, 0, 0, 0.15) 0 2px 12px;
+}
+
+.smallbox_dark {
+  display: inline-flex;
+  align-self: center;
+  margin: 1rem 1rem 1.5rem 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--c-mpink);
+  color: var(--c-lavender);
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dlavender);
+  
+  box-shadow: 
+  rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+  rgba(0, 0, 0, 0.15) 0 2px 12px;
+}
+
+.smallbox_dark h1, h2, h3, h4, h5, h6 {
+  color: var(--c-lpink);
+  display: flex;
+  text-indent: 1rem;
+  font-size: 1.5rem;
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dlavender); 
 }
 
 .smallbox_light a {
@@ -330,10 +364,11 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px inset,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px inset, rgba(0, 0, 0, 0.2) 0px -3px 0px,
     0 2px 12px rgba(0, 0, 0, 0.15) inset;
-}
+  }
 
-.sheet p {
-  padding: 2rem 2rem 2rem 2rem;
+.sheet {
+  font-size: 1.2rem;
+  padding: 1rem 2rem 1rem 2rem;
   background-color: var(--c-white);
   border-radius: 0px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px,
@@ -341,11 +376,16 @@ footer {
   0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.box h2, h3, h4, h5, h6 {
+.sheet p {
+  margin-block-start: 1em;
+  margin-block-end: 1em
+}
+
+.sheet h2, h3, h4, h5, h6 {
   color: var(--c-lpink);
   display: flex;
   text-indent: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
