@@ -15,15 +15,25 @@ function loadPost(postId) {
       var postContent = $(data).find(".post_content").text();
 
       $("#blog-content").html(
-        '<h1 class="box_light" >' +
-          postTitle +
-          "</h1>" +
-          '<p class="small_body_date post_date">' +
-          postDate +
-          "</p>" +
-          '<div class="box"><p>' +
-          postContent +
-          "</p></div>"
+        '<div class="content_header_container">' +
+          '<div class="smallbox_light" >' +
+            "<h1>" +
+              postTitle + 
+            "</h1>" +
+            "</div>" +
+            '<div id="blog_date">' +
+              "<p>" + 
+                postDate +
+              "</p>" +
+          '</div>' +
+        "</div>" +
+        '<div class="box">' +
+          '<div class="sheet">' +
+            "<p>" +
+              postContent +
+            "</p>" +
+          "</div>" +
+        "</div>"
       );
     });
   });

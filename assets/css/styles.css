@@ -30,13 +30,18 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--c-black);
   font-family: 'Satisfy', cursive;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.02rem;
   line-height: 1.2;
   margin-top: 0.9333333333rem;
-  text-shadow:  var(--c-mpink) 2px 4px 1px;
+  color: var(--c-lpink);
+  display: flex;
+  font-size: 2rem;
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink); 
 }
 
 
@@ -208,22 +213,39 @@ footer {
 
 /* decoration Box */
 
-.smallbox_light {
-  padding: 1rem 2rem;
+.content_header_container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+#blog_date {
+  display:inline-flex;
+  padding: 1% 2%;
   color: var(--c-black);
-  background: var(--c-lavender);
   border: 0;
   border-radius: 8px;
   padding: 1% 2%;
   width: fit-content;
-  display: inline-block;
+}
+
+#blog_date p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.smallbox_light {
+  display: inline-flex;
+  padding: 1% 2%;
+  width: fit-content;
+  border-radius: 8px;
+  background: var(--c-lavender);
   color: var(--c-lpink);
-  
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
   4px 4px var(--c-dpink);
-
+  
   box-shadow: 
   rgba(0, 0, 0, 0.4) 0px 2px 4px,
   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
@@ -232,23 +254,35 @@ footer {
 }
 
 .smallbox_light a {
+  display: flex;
+  margin-left: 0.6rem;
+  font-family: 'Satisfy', cursive;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02rem;
+  line-height: 1.2;
+  display: flex;
+  font-size: 2rem;
+  
   text-shadow:
-  0px 1px black, 1px 0px black,
-  -1px 0px black, 0px -1px black,
-  0px 2px white, 2px 0px white,
-  -2px 0px white, 0 -2px white,
-  0px 0px 0px black;
+    0px 1px black,
+    1px 0px black,
+    -1px 0px black,
+    0px -1px black,
+    0px 2px white,
+    2px 0px white,
+    -2px 0px white,
+    0 -2px white,
+    0px 0px 0px black;
 }
 
 .box_light {
-  width: auto;
-  color: var(--c-black);
+  display: flexbox;
+  width: fit-content;
   background: var(--c-lavender);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin: 0rem 0 0rem 1rem;
-  padding: 1rem 2rem 1rem 2rem;
-  color: var(--c-lpink);
+  padding: 1rem 2rem 1rem 1rem;
   
   text-shadow:
   0px 1px black, 1px 0px black,
@@ -261,6 +295,17 @@ footer {
   rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
   rgba(0, 0, 0, 0.15) 0 2px 12px ;
 }
+
+.smallbox_light h2, h3, h4, h5, h6 {
+  display: flex;
+  color: var(--c-lpink);
+  font-size: 2rem;
+  text-shadow:
+  0px 1px black, 1px 0px black,
+  -1px 0px black, 0 -1px black,
+  4px 4px var(--c-dpink); 
+}
+
 .smallbox {
   padding: 1rem 2rem;
   color: var(--c-black);
@@ -279,18 +324,16 @@ footer {
   color: var(--c-black);
   background: var(--c-lavender);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 1px;
+  border-radius: 8px;
   margin-top: 1.6rem;
   padding: 0.5333333333rem 1.6rem 1.6rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
-    0 2px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px inset,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px inset, rgba(0, 0, 0, 0.2) 0px -3px 0px,
+    0 2px 12px rgba(0, 0, 0, 0.15) inset;
 }
 
-.box p {
-  text-indent: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+.sheet p {
+  padding: 2rem 2rem 2rem 2rem;
   background-color: var(--c-white);
   border-radius: 0px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px,
@@ -353,12 +396,7 @@ footer {
   font-size: 1.5rem;
   background: var(--c-lpink);
   color: var(--c-black);
-  border-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   width: fit-content;
-  padding: 0.5333333333rem 1.6rem;
-  margin: 1.2rem 1.5333333333rem -2rem;
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px -2px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.15) 0px 8px 12px -6px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -589,6 +627,11 @@ input:focus:invalid {
   display: none;
 }
 
+.small_body_date.post_date {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
 /* Post */
 
 .prev_title {
@@ -609,7 +652,7 @@ input:focus:invalid {
 }
 
 .post_date {
+  display: flex;
   font-size: 1.8rem;
-  text-align: right;
-  padding: 0 2rem 0.33rem 2rem;
+  text-align: left;
 }
