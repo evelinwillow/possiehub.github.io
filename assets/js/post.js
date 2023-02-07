@@ -15,20 +15,24 @@ function loadPost(postId) {
       var postContent = $(data).find(".post_content").text();
 
       $("#blog-content").html(
-        '<div class="content_header_container">' +
+        '<div class="content_header_container" id="space-around">' +
           '<div class="smallbox_light" >' +
             "<h1>" +
               postTitle + 
             "</h1>" +
-            "</div>" +
-            '<div id="blog_date">' +
-              "<p>" + 
-                postDate +
-              "</p>" +
+          "</div>" +
+          '<div id="blog_date">' +
+            "<p>" + 
+              postDate +
+            "</p>" +
           '</div>' +
         "</div>" +
         '<div class="box">' +
-          '<div class="sheet">' +
+          '<div class="content_header_container" id="space-between">' +
+            '<div class="smallbox_dark" >' +
+            "</div>" +
+          "</div>" +
+            '<div class="sheet">' +
             "<p>" +
               postContent +
             "</p>" +
