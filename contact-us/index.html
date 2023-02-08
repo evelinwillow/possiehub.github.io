@@ -12,8 +12,8 @@
       <header></header>
       <aside id="left"></aside>
       <main>
-        <div class="form_small box_light"><h1>Contact me!</h1></div>
-        <form class="form box_light" action="submit.php" method="post">
+        <div class="content_header_container"><h1>Contact me!</h1></div>
+        <form class="form box" action="submit.php" method="post">
             <p class="form-row">
               <input
                 name="name"
@@ -21,6 +21,7 @@
                 type="text"
                 placeholder="Enter your Name"
               />
+              <input class="form-spacer" />
               <input
                 name="email"
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$"
