@@ -15,13 +15,13 @@ function loadPost(postId) {
       var postContent = $(data).find(".post_content").text();
 
       $("#blog-content").html(
-        '<div class="content_header_container" id="space-around">' +
-          '<div class="smallbox_light" >' +
+        '<div class="content_header_container" id="space-between">' +
+          '<div id="blog_header" class="small_header" >' +
             "<h1>" +
               postTitle + 
             "</h1>" +
           "</div>" +
-          '<div id="blog_date">' +
+          '<div id="blog_date" class=small_header>' +
             "<p>" + 
               postDate +
             "</p>" +
@@ -49,6 +49,10 @@ async function loadPostList() {
     url: "/blog/posts/posts.json",   /* <---- HIER DIE URL ANPASSEN */
   });
 
+  postListHtml.push(
+    '<div class="content_header_container"><h1>All my blog posts!</h1></div>'
+  )
+
   for (let i = 0; i < data.posts.length; i++) {
     const postId = data.posts[i].id;
     const postUrl = "/blog/posts/" + postId + ".html";  /* <---- HIER DIE URL ANPASSEN */
@@ -65,14 +69,23 @@ async function loadPostList() {
 
     postListHtml.push(
       `<section>
+      <div class="content_header_container" id="space-between">
         <div class="small_header">
           <a href="/blog/" class="blog-link" data-post-id="${postId}">
             <div class="prev_title">${postTitle}</div>
-            <div class="prev_date">(${postDate})</div>
           </a>
         </div>
-        <div class="small_body">
-          <p>${postContent}... <a href="/blog/?postId=${postId}">  read more</a></p>  
+        <div class="small_header">
+          <div class="prev_date">(${postDate})</div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content_header_container" id="space-evenly">
+          <div class="smallbox_dark"></div>
+        </div>
+          <div class="sheet">
+            <p>${postContent}... <a href="/blog/?postId=${postId}">  read more</a></p>  
+          </div>
         </div>
       </section>`
     );                                                      /* <---- HIER DIE URL ANPASSEN (zeile 61) */

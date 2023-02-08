@@ -125,8 +125,8 @@ body {
   background-color: var(--c-mpink);
   margin: 0;
   display: grid;
-  grid-template-columns: 1% 98% 1%;
-  grid-template-rows: 32px auto 0;
+  grid-template-columns: 1rem auto 1rem;
+  grid-template-rows: 2.5rem auto 0;
   grid-template-areas:
     "header header header"
     "left content right"
@@ -148,7 +148,7 @@ header {
   align-items: left;
   position: fixed;
   padding: 0 0;
-  height: 32px;
+  height: 2.5rem;
   width: 100vw;
   background: var(--c-lpink);
   border-radius: var(--border-radius);
@@ -220,6 +220,11 @@ footer {
   align-content: center;
 }
 
+.content_header_container h1 {
+    margin-left: 1rem;
+    margin-right: 0rem;
+}
+
 #space-around {
   justify-content: space-around;
 }
@@ -233,12 +238,13 @@ footer {
 }
 
 #blog_date {
-  display:inline-flex;
-  padding: 1% 2%;
+  display:flex;
+  margin: 0 2rem 0 0;
+  justify-content: center;
+  align-content: center;
   color: var(--c-black);
   border: 0;
   border-radius: 8px;
-  padding: 1% 2%;
   width: fit-content;
   background-color: var(--c-white);
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
@@ -249,6 +255,12 @@ footer {
 #blog_date p {
   margin-block-start: 0em;
   margin-block-end: 0em;
+}
+
+#blog_header{
+  margin: 0;
+  margin-left: 2rem;
+  padding: 0;
 }
 
 .smallbox_light {
@@ -271,11 +283,14 @@ footer {
 }
 
 .smallbox_dark {
-  display: inline-flex;
+  display: flex;
   align-self: center;
-  margin: 1rem 1rem 1.5rem 1rem;
+  align-content: center;
+  justify-content: center;
+  margin: 1rem 1rem 1rem 1rem;
   padding: 0 1rem 0 1rem;
-  width: fit-content;
+  width: 100%;
+  height: fit-content;
   border-radius: 8px;
   background: var(--c-lpink);
   box-shadow: 
@@ -286,8 +301,11 @@ footer {
 }
 
 .smallbox_dark h1, h2, h3, h4, h5, h6 {
+  margin-block-end: 1rem;
+  margin-block-start: 1rem;
+  height: 2rem;
   color: var(--c-black);
-  font-weight: var(--font-weight-normal)
+  font-weight: var(--font-weight-normal);
   display: flex;
   text-shadow:
   0px 1px white,
@@ -297,7 +315,14 @@ footer {
   4px 4px var(--c-dlavender); 
 }
 
-.smallbox_light a {
+.smallbox_dark p {
+  margin-block-end: 1rem;
+  margin-block-start: 1rem;
+  height: 2rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.content_header_container a {
   display: flex;
   margin-left: 0.6rem;
   font-family: 'Satisfy', cursive;
@@ -393,7 +418,6 @@ footer {
 .sheet h2, h3, h4, h5, h6 {
   color: var(--c-lpink);
   display: flex;
-  text-indent: 1rem;
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
@@ -401,44 +425,36 @@ footer {
 }
 
 .small_header {
-  font-family: 'Satisfy', cursive;
-  font-weight: var(--font-weight-normal);
-  display: flexbox;
+  display: flex;
   width: fit-content;
-  height: fit-content;
-  justify-content: left;
-  align-items: left;
-  background: var(--c-lavender);
-  padding: 0.3rem 1rem 2.3rem 1rem;
-  margin: 0 0 0 2rem;
+  height: 3rem;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 1.5rem 2rem 0rem 2rem;
+  padding: 0 1rem 0 1rem;
   border-radius: 8px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  box-shadow: rgba(0, 0, 0, 1) 0px -2px 4px -2px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;  height: 0px;
-}
+  background: var(--c-lavender);
+  font-weight: var(--font-weight-normal);
+  font-family: 'Satisfy', cursive;
+    box-shadow: 
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+    rgba(0, 0, 0, 0.15) 0 2px 12px;
+    text-decoration: none;
+  }
 
 .small_header a {
   color: var(--text-color-2);
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  flex: 1;
+  padding: 0;
 }
 
-.small_body {
-  color: #afbfd2;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  background: var(--c-lpink);
-  color: var(--c-black);
-  border-radius: 20px;
-  padding: 0.5333333333rem 1.6rem;
-  margin: 0rem 0.5333333333rem 1.2rem;
-  box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px -2px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.15) 0px 8px 12px -6px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+.small_header h1 {
+  margin-right: 1rem;
 }
+
 .small_body_date {
   color: #afbfd2;
   font-size: 1.5rem;
@@ -457,28 +473,29 @@ footer {
   grid-area: navbar;
   display: flex;
   align-items: left;
-  margin-top: 2.5px;
+  margin-top: 0.100rem;
   margin-left: 0px;
 }
 
 .navbar a {
-  color: var(--c-black);
+  color: var(--c-dlavender);
   font-weight: var(--font-weight-normal);
   text-decoration: none;
+  font-size: 1.3rem;
   background-color: var(--c-lpink);
   border-radius: 10px;
-  border-color: var(--c-black);
+  border-color: var(--c-dlavender);
   text-align: center;
   color: var(--c-black);
-  padding: 0.1rem 0.4rem;
+  padding: 0.2rem 0.4rem;
   margin-right: 4px;
+
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
   rgb(255, 100, 255) -2px 7px 15px -3px inset,
   rgba(255, 255, 255, 1) 0px 2px 12px inset;
 }
 
 .navbar a:hover {
-  color: var(--c-black);
   background-color: var(--c-white);
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
   rgb(255, 50, 255) -2px 7px 15px -3px inset,
