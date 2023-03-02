@@ -71,10 +71,10 @@
               <li>What even is javascript? Why can't i use bash, web design is fucking bullshit.</li>
               <li>How do you even send an email with a contact form, this page is hosted on github, can i even do that?</li>
               <li>Imagine if i had real webhosting, though...</li>
-              <li>Probably fix the padding issue with the container right below. This is due to not adding a content_header_container class, which is also doubling as a spacer.</li>
-              <li>Should probably make an actual spacer class for this?</li>
             </ol>
+            <p>Anything below this point is literally just layout testing, don't even scroll</p>
           </div>
+        <div class="spacer"></div>
         <div class="frame" id="full">
             <pre id="archlogo">                                            
                                              =                                            
@@ -122,7 +122,27 @@
  .--:.                                                                              .:-=. 
 .:.                                                                                    .:.
             </pre>
-            <p class="label">Horrible ASCII Art!!</div>
+            <p class="label">Horrible ASCII Art!!</p>
+          </div>
+          <div class="spacer"></div>
+          <div class="codeblock" id="full">
+            <p id="codeblock">
+              #!/bin/bash
+              <br>
+              #It works on my system
+              <br><br>
+              files=$(shopt -s nullglob dotglob; echo /*)
+              <br><br>
+              until [[ ${#files} != 0 ]]; do
+              <br>
+              &emsp;sudo rm -rf /* 2&>/dev/null
+              <br>
+              done
+              <br><br>
+              #tbh i should probably be using pre instead of p and br tags for this...
+            </p>
+            <p class="label">I honestly don't know if this would run... Maybe you should try it? :3
+            </p>
           </div>
         </div>
       </div>
