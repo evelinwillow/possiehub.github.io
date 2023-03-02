@@ -15,7 +15,7 @@
   --c-dlavender: #a7a7ff;
   --c-cotton-candy: #FFBCD9;
   --c-mauve: #ECB0FF;
-  --c-light-blue: #A3F1FF;
+  --c-light-blue: rgba(163, 241, 255, 0.5);
   --c-hot-pink: #FF70AE;
 
 }
@@ -173,7 +173,7 @@ header {
 
 main {
   grid-area: content;
-  padding: 20px 10px;
+  padding: 1rem 0;
 }
 
 .body {
@@ -237,11 +237,35 @@ footer {
   0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-#crop.frame {
+.codeblock {
+  justify-items: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: var(--c-white);
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px,
+  rgba(0, 0, 0, 0) 0px 7px 13px -3px,
+  0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+#codeblock {
+  background-color: var(--c-black);
+  color: var(--c-cotton-candy);
+  font-family: 'VT323', monospace;
+  margin: 0;
+  padding: 1rem 1rem 1rem 1rem;
+  line-height: 1.2rem;
+}
+
+
+
+#crop {
   width: fit-content;
 }
 
-#full.frame {
+#full {
   width: auto;
 }
 
@@ -251,6 +275,13 @@ footer {
   height: fit-content;
   margin: auto;
   padding: 1rem 0rem 0rem 0rem;
+}
+
+.spacer {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 .content_header_container {
@@ -282,19 +313,18 @@ footer {
   width: fit-content;
   background-color: var(--c-white);
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
-  var(--c-dlavender) -2px 7px 15px -3px inset,
+  var(--c-light-blue) -2px 7px 2rem -1rem inset,
   rgba(255, 255, 255, 1) 0px 2px 12px inset;
+}
+
+#blog-content {
+  padding: 0;
+  margin: 0;
 }
 
 #blog_date p {
   margin-block-start: 0em;
   margin-block-end: 0em;
-}
-
-#blog_header{
-  margin: 0;
-  margin-left: 2rem;
-  padding: 0;
 }
 
 .smallbox_light {
@@ -350,7 +380,7 @@ footer {
   1px 0px white,
   -1px 0px white,
   0 -1px white,
-  4px 4px var(--c-mauve); 
+  4px 4px var(--c-hot-pink); 
 }
 
 .smallbox_dark p {
@@ -379,13 +409,13 @@ footer {
     -2px 0px white,
     0 -2px white,
     0px 0px 0px black,
-    4px 4px var(--c-mauve); 
+    4px 4px var(--c-hot-pink); 
 }
 
 .box_light {
   display: flexbox;
   width: fit-content;
-  background: var(--c-mauve);
+  background: var(--c-hot-pink);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin: 0rem 0 0rem 1rem;
@@ -416,7 +446,7 @@ footer {
 .smallbox {
   padding: 1rem 2rem;
   color: var(--c-black);
-  background: var(--c-lavender);
+  background: var(--c-light-blue);
   border: 0;
   border-radius: 10px;
   padding: 2% 5%;
@@ -429,10 +459,10 @@ footer {
 
 .box {
   color: var(--c-black);
-  background: var(--c-lavender);
+  background: var(--c-light-blue);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  margin-top: 1.6rem;
+  margin-top: 1rem;
   padding: 0.5333333333rem 1.6rem 1.6rem;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px inset,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px inset, rgba(0, 0, 0, 0.2) 0px -3px 0px,
@@ -448,15 +478,18 @@ footer {
   0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.sheet p {
+.sheet p, ul, ol {
   margin-block-start: 1em;
-  margin-block-end: 1em
+  margin-block-end: 1em;
 }
 
 .sheet h2, h3, h4, h5, h6 {
   color: var(--c-black);
+  background-color: var(--c-light-blue);
   display: flex;
   font-weight: var(--font-weight-normal);
+  border-radius: 8px;
+  padding: 1rem 1rem 1rem 1rem;
   text-shadow:
   0px 1px white,
   1px 0px white,
@@ -476,7 +509,7 @@ footer {
   margin: 1.5rem 2rem 0rem 2rem;
   padding: 0 1rem 0 1rem;
   border-radius: 8px;
-  background: var(--c-lavender);
+  background: var(--c-light-blue);
   font-weight: var(--font-weight-normal);
   font-family: 'Satisfy', cursive;
     box-shadow: 
@@ -602,7 +635,7 @@ footer {
   display: box;
   width: auto;
   padding: 1rem 1rem 1rem 1rem;
-  border: var(--c-lavender);
+  border: var(--c-light-blue);
   border-radius: 8px;
   justify-content: space-evenly;
   align-content: center;
@@ -612,7 +645,7 @@ footer {
 .form_small {
   display: flex;
   color: var(--c-black);
-  background: var(--c-lavender);
+  background: var(--c-light-blue);
   border: 0;
   border-radius: 8px;
   padding: 1% 2%;
@@ -755,28 +788,4 @@ input:focus:invalid {
   display: flex;
   padding: 0;
   margin: 0;
-}
-/* Post */
-
-.prev_title {
-  font-size: 1.6rem;
-  text-align: start;
-  padding-right: 1rem;
-  color: var(--c-lpink);
-  text-shadow:
-  0px 1px black, 1px 0px black,
-  -1px 0px black, 0 -1px black,
-  4px 4px var(--c-dpink);
-}
-
-.prev_date {
-  font-size: 1.4rem;
-  text-align: end;
-  color: slategray;
-}
-
-.post_date {
-  display: flex;
-  font-size: 1.8rem;
-  text-align: left;
 }
