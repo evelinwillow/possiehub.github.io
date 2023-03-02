@@ -14,6 +14,7 @@
   --c-white: rgb(255, 255, 245);
   --c-lavender: #E6E6FA;
   --c-dlavender: #a7a7ff;
+  --c-amethyst: #9966cc;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -255,11 +256,6 @@ footer {
   align-content: center;
 }
 
-.content_header_container h1 {
-    margin-left: 1rem;
-    margin-right: 0rem;
-}
-
 #space-around {
   justify-content: space-around;
 }
@@ -339,6 +335,7 @@ footer {
   margin-block-end: 1rem;
   margin-block-start: 1rem;
   height: 2rem;
+  font-size: 1.75rem;
   color: var(--c-black);
   font-weight: var(--font-weight-normal);
   display: flex;
@@ -347,7 +344,7 @@ footer {
   1px 0px white,
   -1px 0px white,
   0 -1px white,
-  4px 4px var(--c-dlavender); 
+  4px 4px var(--c-amethyst); 
 }
 
 .smallbox_dark p {
@@ -357,26 +354,26 @@ footer {
   font-weight: var(--font-weight-bold);
 }
 
-.content_header_container a {
+.smallbox_dark a {
   display: flex;
-  margin-left: 0.6rem;
+  align-self: center;
+  justify-self: center;
   font-family: 'Satisfy', cursive;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
   letter-spacing: 0.02rem;
   line-height: 1.2;
   display: flex;
-  font-size: 2rem;
+  height: 2rem;
+  font-size: 1.75rem;
+  color: var(--c-black);
   
   text-shadow:
-    0px 1px black,
-    1px 0px black,
-    -1px 0px black,
-    0px -1px black,
     0px 2px white,
     2px 0px white,
     -2px 0px white,
     0 -2px white,
-    0px 0px 0px black;
+    0px 0px 0px black,
+    4px 4px var(--c-amethyst); 
 }
 
 .box_light {
@@ -451,11 +448,14 @@ footer {
 }
 
 .sheet h2, h3, h4, h5, h6 {
-  color: var(--c-lpink);
+  color: var(--c-black);
   display: flex;
+  font-weight: var(--font-weight-normal);
   text-shadow:
-  0px 1px black, 1px 0px black,
-  -1px 0px black, 0 -1px black,
+  0px 1px white,
+  1px 0px white,
+  -1px 0px white,
+  0 -1px white,
   4px 4px var(--c-dpink); 
 }
 

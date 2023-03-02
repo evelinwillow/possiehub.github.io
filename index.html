@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="fonts" type="text/css" href="/assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
-    <title>evelin.pink</title>
+    <title>evelin.pink | Hi, i'm Evelin.</title>
     <script src="/assets/js/jquery-3.6.3.min.js"></script>
     <script src="/assets/js/assets_loader.js"></script>
     <script src="/assets/js/post.js"></script>
@@ -21,15 +21,55 @@
       <div class="box">
         <div class="content_header_container" id="space-between">
           <div class="smallbox_dark">
-            <a href="/blog/" class="blog-link" data-post-id="1">Here's my latest blog post!</a>
+            <h2>About me && whatever this website *is*</h2>
           </div>
         </div>  
         <div class="sheet">
           <p>
-            Hey hi um uhhh i released my first song!! >.<
+            Hi, i'm Evelin, and this is my website. I'm mostly setting this up as a coding exercise, however i also plan to use this as a blog, to promote my music, 
+            and whatever other fun goodies i can shove into it. Most of the layout, and probably actually the entire code behind this website is subject to change and will probably
+            change often, whenever i feel like working on this further. This index page is also mostly there to test layout changes; The actual "content" can be reached via the navbar
+            or the two links right below this (there is no actual content as of yet and most things are very much WIP, and don't really work.).
           </p>
-          <a href="https://distrokid.com/hyperfollow/evelinanastaziawillow/desire">Clicky here!!!</a>
+          <p>
+            Hey hi um uhhh i released my first song!! >.< If you click on the left button below this, you can presave it on spotify, if you'd like. There's also a link to my lastest
+            blog post on the right, however it currently only links to a test post.
+          </p>
+          
         </div>
+        <div class="content_header_container" id="space-evenly">
+          <div class="smallbox_dark" id="test">
+            <h2></h2><a href="https://distrokid.com/hyperfollow/evelinanastaziawillow/desire">Clicky here for the hyperfollow page!!!</a>
+          </div>
+          <div class="smallbox_dark">
+            <p></p>
+            <a href="/blog/" class="blog-link" data-post-id="1">Here's my latest blog entry!</a>
+          </div>
+        </div>
+        <div class="sheet">
+          <h2> Dev roadmap/honestly just a TODO:</h2>
+          <ol>
+            <li>Fix the HORRIBLE heading right above this. </li>
+            <li>Implement some additional elements, mainly a music player (Youtube and Spotify integration) as well as a code container for easier readability.</li>
+            <li>Redo most of the CSS, implementing SASS:</li>
+              <ol>
+                <li>Currently there's several elements which are mostly clones with minor changes, which could be consolidated.</li>
+                <li>There's better ways to uniquely identify elements other than making a seperate class for everything.</li>
+                <li>Many things are hardcoded and repeated several times.</li>
+                <li>The layout is also all over the place and quite frankly, a mess.</li>
+                <li>On some browsers, the colors do not display properly. This may be a transparency issue.</li>
+                <li>It's really concerning that using rem for every single unit is working so well? This can't be right, 90% of all sizes specified are 1 or 2 rem.</li>
+                <li>This website is also essentially the opposite of mobile-first development, which is it's own entire can of worms, but i should probably adhere to industry standards.</li>
+                <li>It also looks good on essentially only one or two screen resolutions; Media queries could help. :)</li>
+              </ol>
+              <li>Also redo a lot of the HTML i've written.</li>
+              <li>What even is javascript? Why can't i use bash, web design is fucking bullshit.</li>
+              <li>How do you even send an email with a contact form, this page is hosted on github, can i even do that?</li>
+              <li>Imagine if i had real webhosting, though...</li>
+              <li>Probably fix the padding issue with the container right below. This is due to not adding a content_header_container class, which is also doubling as a spacer.</li>
+              <li>Should probably make an actual spacer class for this?</li>
+            </ol>
+          </div>
         <div class="frame" id="full">
             <pre id="archlogo">                                            
                                              =                                            
