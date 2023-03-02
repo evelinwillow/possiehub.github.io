@@ -16,12 +16,12 @@ function loadPost(postId) {
 
       $("#blog-content").html(
         '<div class="content_header_container" id="space-between">' +
-          '<div id="blog_header" class="small_header" >' +
+          '<div id="blog_header" class="smallbox_dark" >' +
             "<h1>" +
               postTitle + 
             "</h1>" +
           "</div>" +
-          '<div id="blog_date" class=small_header>' +
+          '<div id="blog_date" class=smallbox_dark>' +
             "<p>" + 
               postDate +
             "</p>" +
@@ -50,7 +50,7 @@ async function loadPostList() {
   });
 
   postListHtml.push(
-    '<div class="content_header_container"><h1>All my blog posts!</h1></div>'
+    '<div class="content_header_container"><h1>Hi! I\'m Evelin Anastazia Willow, and these are all my blog posts!</h1></div>'
   )
 
   for (let i = 0; i < data.posts.length; i++) {
@@ -70,23 +70,24 @@ async function loadPostList() {
     postListHtml.push(
       `<section>
       <div class="content_header_container" id="space-between">
-        <div class="small_header">
-          <a href="/blog/" class="blog-link" data-post-id="${postId}">
-            <div class="prev_title">${postTitle}</div>
-          </a>
-        </div>
-        <div class="small_header">
-          <div class="prev_date">(${postDate})</div>
-        </div>
+      <div class="smallbox_dark">
+      <p></p>
+      <a href="/blog/" class="blog-link" data-post-id="${postId}">
+      <div class="prev_title">${postTitle}</div>
+      </a>
+      </div>
+      <div id="blog_date" class=smallbox_dark>
+      <p>
+      ${postDate}
+      </p>
+      </div>
       </div>
       <div class="box">
-        <div class="content_header_container" id="space-evenly">
-          <div class="smallbox_dark"></div>
+        <div class="content_header_containter"><p></p></div>
+        <div class="sheet">
+          <p>${postContent}... <a href="/blog/?postId=${postId}">  read more</a></p>  
         </div>
-          <div class="sheet">
-            <p>${postContent}... <a href="/blog/?postId=${postId}">  read more</a></p>  
-          </div>
-        </div>
+      </div>
       </section>`
     );                                                      /* <---- HIER DIE URL ANPASSEN (zeile 61) */
   }  
