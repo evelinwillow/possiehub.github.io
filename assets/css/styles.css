@@ -7,14 +7,17 @@
   --font-weight-bold: 700;
   --line-height: 1.6;
   --c-black: #000;
-  --c-blue: #0FF;
   --c-lpink: rgb(255, 245, 255);
-  --c-mpink: rgb(255, 230, 255);
-  --c-dpink: rgb(255, 100, 255);
+  --c-mpink: rgb(255, 188, 217);
+  --c-dpink: rgb(255, 0, 255);
   --c-white: rgb(255, 255, 245);
   --c-lavender: #E6E6FA;
   --c-dlavender: #a7a7ff;
-  --c-amethyst: #9966cc;
+  --c-cotton-candy: #FFBCD9;
+  --c-mauve: #ECB0FF;
+  --c-light-blue: #A3F1FF;
+  --c-hot-pink: #FF70AE;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,13 +40,13 @@ h6 {
   letter-spacing: 0.02rem;
   line-height: 1.2;
   margin-top: 0.9333333333rem;
-  color: var(--c-lpink);
+  color: var(--c-white);
   display: flex;
   font-size: 3rem;
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
-  4px 4px var(--c-dpink); 
+  4px 4px var(--c-hot-pink); 
 }
 
 
@@ -217,7 +220,7 @@ footer {
   width: auto;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: var(--c-mpink);
+  background-color: var(--c-cotton-candy);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 1px inset;
 }
 
@@ -299,12 +302,12 @@ footer {
   padding: 1% 2%;
   width: fit-content;
   border-radius: 8px;
-  background: var(--c-lavender);
-  color: var(--c-lpink);
+  background: var(--c-light-blue);
+  color: var(--c-cotton-candy);
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
-  4px 4px var(--c-dpink);
+  4px 4px var(--c-hot-pink);
   
   box-shadow: 
   rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -317,18 +320,21 @@ footer {
   display: flex;
   align-self: center;
   align-content: center;
+  justify-self: center;
   justify-content: center;
   margin: 1rem 1rem 1rem 1rem;
   padding: 0 1rem 0 1rem;
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   border-radius: 8px;
-  background: var(--c-lpink);
+  background: var(--c-light-blue);
   box-shadow: 
   rgba(0, 0, 0, 0.4) 0px 2px 4px,
   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
   rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
-  rgba(0, 0, 0, 0.15) 0 2px 12px;
+  rgba(0, 0, 0, 0.15) 0 2px 12px,
+  var(--c-cotton-candy) 0px 1rem 2rem -1rem inset,
+  white 0px 3rem 2rem -1rem inset;
 }
 
 .smallbox_dark h1, h2, h3, h4, h5, h6 {
@@ -344,7 +350,7 @@ footer {
   1px 0px white,
   -1px 0px white,
   0 -1px white,
-  4px 4px var(--c-amethyst); 
+  4px 4px var(--c-mauve); 
 }
 
 .smallbox_dark p {
@@ -373,13 +379,13 @@ footer {
     -2px 0px white,
     0 -2px white,
     0px 0px 0px black,
-    4px 4px var(--c-amethyst); 
+    4px 4px var(--c-mauve); 
 }
 
 .box_light {
   display: flexbox;
   width: fit-content;
-  background: var(--c-lavender);
+  background: var(--c-mauve);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin: 0rem 0 0rem 1rem;
@@ -388,7 +394,7 @@ footer {
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
-  4px 4px var(--c-dpink);
+  4px 4px var(--c-hot-pink);
   
   box-shadow: 
   rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -399,12 +405,12 @@ footer {
 
 .smallbox_light h2, h3, h4, h5, h6 {
   display: flex;
-  color: var(--c-lpink);
+  color: var(--c-cotton-candy);
   font-size: 2rem;
   text-shadow:
   0px 1px black, 1px 0px black,
   -1px 0px black, 0 -1px black,
-  4px 4px var(--c-dpink); 
+  4px 4px var(--c-hot-pink); 
 }
 
 .smallbox {
@@ -456,7 +462,7 @@ footer {
   1px 0px white,
   -1px 0px white,
   0 -1px white,
-  4px 4px var(--c-dpink); 
+  4px 4px var(--c-hot-pink); 
 }
 
 .small_header {
@@ -513,34 +519,33 @@ footer {
 }
 
 .navbar a {
-  color: var(--c-dlavender);
   font-weight: var(--font-weight-normal);
   text-decoration: none;
   font-size: 1.3rem;
-  background-color: var(--c-lpink);
+  background-color: var(--c-light-blue);
   border-radius: 10px;
-  border-color: var(--c-dlavender);
+  border-color: var(--c-black);
   text-align: center;
   color: var(--c-black);
   padding: 0.2rem 0.4rem;
   margin-right: 4px;
 
-  box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
-  rgb(255, 100, 255) -2px 7px 15px -3px inset,
-  rgba(255, 255, 255, 1) 0px 2px 12px inset;
+  box-shadow: black 0px 2px 4px inset,
+  var(--c-hot-pink) -2px 7px 15px -3px inset,
+  white 0px 2px 12px inset;
 }
 
 .navbar a:hover {
   background-color: var(--c-white);
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 4px inset,
-  rgb(255, 50, 255) -2px 7px 15px -3px inset,
+  var(--c-hot-pink) -2px 7px 15px -3px inset,
   rgba(255, 255, 255, 1) 0px 2px 12px inset;
 }
 
 .navbar a:active {
   text-decoration: solid;
   box-shadow: rgba(0, 0, 0, 1) 0px 2px 8px inset,
-  rgb(255, 100, 255) -2px 14px 15px -3px inset,
+  var(--c-hot-pink) -2px 14px 15px -3px inset,
   rgba(255, 255, 255, 1) 0px 2px 8px inset;
   padding: 0.1rem 0.4rem;
   overflow: hidden;
@@ -566,7 +571,7 @@ footer {
 
 #about-us-dropdown {
   display: none;
-  background-color: var(--c-lpink);
+  background-color: var(--c-white);
   margin: 6px 0 0 -6px;
   padding: 4px 0px 2px 4px;
   border-radius: 12px;
@@ -584,8 +589,11 @@ footer {
 
 #about-us-dropdown a {
   display: flex;
+  height: fit-content;
+  line-height: 1.8rem;
   padding: 0 8px 0px 8px;
   margin: 0 4px 4px 0;
+  font-size: 1.3rem;
 }
 
 /* Contact Form */
