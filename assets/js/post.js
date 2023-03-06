@@ -16,7 +16,7 @@ function loadPost(postId) {
 
       $("#blog-content").html(
         '<div class="content_header_container" id="space-between">' +
-          '<div id="blog_header" class="smallbox_dark" >' +
+          '<div id="blog_header">' +
             "<h1>" +
               postTitle + 
             "</h1>" +
@@ -27,7 +27,7 @@ function loadPost(postId) {
             "</p>" +
           '</div>' +
         "</div>" +
-        '<div class="box">' +
+        '<div class="box"><div class="box_inner">' +
           '<div class="content_header_container" id="space-between">' +
             '<div class="smallbox_dark" >' +
             "</div>" +
@@ -36,8 +36,8 @@ function loadPost(postId) {
             "<p>" +
               postContent +
             "</p>" +
-          "</div>" +
-        "</div>"
+          "</div></div>" +
+          "</div>"
       );
     });
   });
@@ -82,12 +82,13 @@ async function loadPostList() {
       </p>
       </div>
       </div>
-      <div class="box">
+      <div class="box" id="fit"><div class="box_inner" id="fit">
         <div class="content_header_containter"><p></p></div>
         <div class="sheet">
           <p>${postContent}... <a href="/blog/?postId=${postId}">  read more</a></p>  
         </div>
-      </div>
+      </div></div>
+      <div class="spacer"></div>
       </section>`
     );                                                      /* <---- HIER DIE URL ANPASSEN (zeile 61) */
   }  

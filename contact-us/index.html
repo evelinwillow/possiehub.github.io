@@ -13,39 +13,58 @@
       <aside id="left"></aside>
       <main>
         <div class="content_header_container"><h1>Contact me!</h1></div>
-        <form class="form box" action="submit.php" method="post">
-            <p class="form-row">
+        <form class="box" action="submit.php" method="post"><div class="box_inner">
+          <div class="content_header_container" id="space-around">
+            <div class="smallbox_dark" id="stretch">
+              <h2>Required information:</h2>
+            </div>
+          </div>
+          <div class="sheet">
+            <div class="content_header_container" id="space-between">
+              <h2 id="label">Name</h2>
+              <div class="spacer">|</div>
               <input
-                name="name"
-                required=""
-                type="text"
-                placeholder="Enter your Name"
+              id="form_input"
+              name="name"
+              required=""
+              type="text"
               />
-              <input class="form-spacer" />
+            </div>
+            <div class="content_header_container" id="space-between">
+              <h2 id="label">Mail</h2>
+              <div class="spacer">|</div>
               <input
+                id="form_input"
                 name="email"
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$"
                 required=""
                 type="email"
-                placeholder="Enter a valid email address"
               />
-            </p>
-            <p class="hidden">
-              Leave this empty:<br /><input name="url" type="text" />
-            </p>
-            <p class="form-row">
-              <textarea
-                cols="50"
-                name="message"
-                required=""
-                rows="10"
-                placeholder="Enter your message"
-              ></textarea>
-            </p>
-            <p class="form-row">
-              <input class="submit-btn" type="submit" value="Send" />
-            </p>
-          </form>
+            </div>
+          </div>
+          <p class="hidden">
+            Leave this empty:<br /><input name="url" type="text" />
+          </p>
+          <div class="content_header_container" id="space-around">
+            <div class="smallbox_dark" id="stretch">
+              <h2>Enter your message:</h2>
+            </div>
+          </div>
+          <textarea 
+            class="sheet"
+            name="message"
+            required=""
+            rows="15">
+          </textarea>
+          <div class="content_header_container" id="space-around">
+            <div class="smallbox_dark">
+              <input id="nolabel" type="submit" value=""/>
+              <div class="spacer" id="submit_button"></div>
+              <h2>Send</h2>
+              <div class="spacer" id="submit_button"></div>
+            </div>    
+          </div>
+        </div></form>
       </main>
       <aside></aside>
       <footer></footer>
