@@ -133,6 +133,7 @@ body {
   background: var(--c-cotton-candy);
   margin: 0;
   -ms-overflow-style: none;
+  scrollbar-width: none;
   display: grid;
   grid-template-columns: 1rem auto 1rem;
   grid-template-rows: 2.5rem auto 2rem;
