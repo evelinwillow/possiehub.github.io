@@ -78,7 +78,7 @@ h6 {
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.02rem;
   line-height: 1.2;
-  margin-top: 0.9333333333rem;
+  margin: 0;
   color: var(--c-white);
   display: flex;
   font-size: 3rem;
@@ -88,60 +88,8 @@ h6 {
   4px 4px var(--c-hot-pink); 
 }
 
-
-h1,
-.h1 {
-  margin: 0;
-}
-h1,
-.h1 {
-  font-size: 1.6018066406rem;
-}
-@media screen and (min-width: 20rem) {
-  h1,
-  .h1 {
-    font-size: calc(1.6018066406rem + 0.6788907051 * ((100vw - 20rem) / 113));
-  }
-}
-@media screen and (min-width: 133rem) {
-  h1,
-  .h1 {
-    font-size: 2.2806973457rem;
-  }
-}
-
-h2,
-.h2 {
-  font-size: 1.265625rem;
-}
-@media screen and (min-width: 20rem) {
-  h2,
-  .h2 {
-    font-size: calc(1.265625rem + 0.5364074707 * ((100vw - 20rem) / 113));
-  }
-}
-@media screen and (min-width: 133rem) {
-  h2,
-  .h2 {
-    font-size: 1.8020324707rem;
-  }
-}
-
-h3,
-.h3 {
-  font-size: 1.125rem;
-}
-@media screen and (min-width: 20rem) {
-  h3,
-  .h3 {
-    font-size: calc(1.125rem + 0.4768066406 * ((100vw - 20rem) / 113));
-  }
-}
-@media screen and (min-width: 133rem) {
-  h3,
-  .h3 {
-    font-size: 1.6018066406rem;
-  }
+#main_heading {
+  padding-left: 1rem;
 }
 
 b,
@@ -172,6 +120,7 @@ body {
   background: var(--c-cotton-candy);
   margin: 0;
   -ms-overflow-style: none;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1rem auto 1rem;
   grid-template-rows: 2.5rem auto 2rem;
@@ -338,6 +287,7 @@ footer {
 .content_header_container {
   display: flex;
   width: 100%;
+  height: auto;
   align-content: center;
 }
 
@@ -523,6 +473,8 @@ footer {
 }
 
 .box {
+  display: grid;
+  grid-area: content;
   color: var(--c-black);
   background: var(--c-light-blue);
   border-radius: 8px;
@@ -530,21 +482,25 @@ footer {
   overflow-y: scroll;
   box-sizing: border-box;
   scrollbar-width: none;
-  height: 85vh;
+  height: 83vh;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px inset,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px inset, rgba(0, 0, 0, 0.2) 0px -3px 0px,
     0 2px 12px rgba(0, 0, 0, 0.15) inset;
-
+    
   }
   
 .box_inner {    
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  box-sizing: border-box;
-  height: 85vh;
-}
+    display: grid;
+    grid-area: content;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    -webkit-mask-image: linear-gradient(transparent 1%, black 2%,black 98%, transparent 100%);
+    mask-image: linear-gradient(transparent 1%, black 2%,black 98%, transparent 99%);
+
+ }
 
 #fit {
   height: auto;
@@ -825,4 +781,8 @@ input:focus:invalid {
 
 .spotify {
   background-color: transparent;
+}
+
+@media only screen and (max-device-width: 480px) {
+
 }
