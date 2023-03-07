@@ -67,16 +67,6 @@
   cursor: pointer;
 }
 
-@supports not (scrollbar-width: none) {
-  .modal {
-    display: block;
-  }
-
-  .footer {
-    display: none;
-  }
-}
-
 /* font and links */
 h1,
 h2,
