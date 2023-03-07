@@ -33,7 +33,6 @@ if (isFirefox) {
         console.log("The user is not using Firefox 64 or higher!");
         console.log(ua);
         modal.style.display = "block";
-        footer.style.display = "none";
     }
 } else {
     console.log("The user is not using Firefox!");
@@ -43,7 +42,6 @@ if (isFirefox) {
 // When the user clicks on the close button, close the modal
 div.onclick = function() {
   modal.style.display = "none";
-  footer.style.display = "grid";
 }
 
 // When the user clicks anywhere outside of the modal, close it
