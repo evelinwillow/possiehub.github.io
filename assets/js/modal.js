@@ -3,10 +3,10 @@ var modal = document.getElementById("modal");
 
 // Get the footer because it's being silly
 
-var footer = document.getElementsByClassName("footer");
+var footer = document.getElementsByClassName("footer")[0];
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var div = document.getElementById("close");
 
 // User agent detection stuff
 
@@ -40,14 +40,15 @@ if (isFirefox) {
     console.log(ua);
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// When the user clicks on the close button, close the modal
+div.onclick = function() {
   modal.style.display = "none";
+  footer.style.display = "grid";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+//*window.onclick = function(event) {
+//  if (event.target == modal) {
+//    modal.style.display = "none";
+//  }
+//}
