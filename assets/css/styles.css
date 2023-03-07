@@ -697,20 +697,37 @@ input {
   box-sizing: border-box;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  border-color: var(--c-cotton-candy);
+  border-style: dotted;
+  border-width: 2px;
   border-radius: 8px;
   padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: var(--c-light-blue);
+  background-color: var(--c-white);
   color: var(--c-black);
 }
 
+/* DISABLING AUTOFILL COLORS ON CHROME */
 
+input:autofill,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    color: var(--c-black);
+    font-weight: var(--font-weight-normal);
+    border-width: 4px;
+    border-color: var(--c-cotton-candy);
+}
 
-input:-internal-autofill-selected {
-  appearance: menulist-button;
-  background-color: var(--c-cotton-candy) !important;
-  color: var(--c-black) !important;
+/* MAKING THE SITE LESS ACCESSIBLE LMAO */
+
+*:focus {
+  outline: none;
+  outline-style: dotted;
+  outline-color: var(--c-cotton-candy);
+  outline-width: 2px;
 }
 
 h2#label {
@@ -764,4 +781,8 @@ input:focus:invalid {
   display: flex;
   padding: 0;
   margin: 0;
+}
+
+.spotify {
+  background-color: transparent;
 }
