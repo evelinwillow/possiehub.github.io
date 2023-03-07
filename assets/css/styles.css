@@ -133,7 +133,6 @@ body {
   background: var(--c-cotton-candy);
   margin: 0;
   -ms-overflow-style: none;
-  scrollbar-width: none;
   display: grid;
   grid-template-columns: 1rem auto 1rem;
   grid-template-rows: 2.5rem auto 2rem;
@@ -492,6 +491,7 @@ footer {
   margin-top: 1rem;
   overflow-y: scroll;
   box-sizing: border-box;
+  scrollbar-width: none;
   height: 85vh;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px inset,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px inset, rgba(0, 0, 0, 0.2) 0px -3px 0px,
@@ -503,6 +503,7 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   overflow-y: scroll;
+  scrollbar-width: none;
   box-sizing: border-box;
   height: 85vh;
 }
